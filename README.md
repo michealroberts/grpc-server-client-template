@@ -1,2 +1,3 @@
-# astral-uv-python-package-template
-A hypermodern python package starter template with astral uv ruff and mypy
+# hypergrpc
+
+A hypermodern python package starter template to start with a Python gRPC server<=>client w/ Protobufs.
