@@ -8,6 +8,7 @@
 from ping_grpc import PingServiceBase, PingServiceStub
 from ping_pb2 import PingRequest, PongReply
 
+from .server import run_server
 from .services.ping import PingService
 
 # **************************************************************************************
@@ -28,6 +29,7 @@ __all__: list[str] = [
     "PingServiceStub",
     "PingRequest",
     "PongReply",
+    "run_server",
 ]
 
 # **************************************************************************************
