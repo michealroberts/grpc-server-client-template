@@ -1,0 +1,38 @@
+// *************************************************************************************
+
+// @package        hypergrpc
+// @license        MIT License Copyright (c) 2025 Michael J. Roberts
+
+// *************************************************************************************
+
+syntax = "proto3";
+
+// *************************************************************************************
+
+package hypergrpc.ping.v1;
+
+// *************************************************************************************
+
+// The request message containing the ping message.
+message PingRequest {
+  string message = 1; // "ping"
+}
+
+// *************************************************************************************
+
+// The response message containing the pong message.
+message PongReply {
+  string message = 1; // "pong"
+}
+
+// *************************************************************************************
+
+// The ping service definition.
+service PingService {
+  // Sends a ping to the server, and receives a pong in reply.
+  rpc Ping (PingRequest) returns (PongReply);
+  // Sends a ping to the server, and receives a pong stream in reply.
+  rpc UnaryStreamPing (PingRequest) returns (stream PongReply);
+}
+
+// *************************************************************************************
